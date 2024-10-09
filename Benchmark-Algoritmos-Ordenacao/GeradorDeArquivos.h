@@ -3,9 +3,10 @@
 #include <time.h>
 
 #include "./TAD_GeradorDeArquivos.h"
-#include "./OP/GerarArquivoOrdenado.h"
-#include "./OP/GerarArquivoInvertido.h"
-#include "./OP/GerarArquivoDesordenado.h"
 
-#include "./OP/GerarBenchmarkBubbleSort.h"
-#include "./OP/GerarBenchmarkInsertionSort.h"
+#include "./OP/Arquivos/GerarArquivoOrdenado.h"
+#include "./OP/Arquivos/GerarArquivoInvertido.h"
+#include "./OP/Arquivos/GerarArquivoDesordenado.h"
+
+#include "./OP/Algoritmos/GerarBenchmarkInsertionSort.h"
+#include "./OP/Algoritmos/GerarBenchmarkBubbleSort.h"
