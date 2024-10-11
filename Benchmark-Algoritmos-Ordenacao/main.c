@@ -5,7 +5,7 @@
 int main() {
   int tam, op;
   char nomeArquivo[100];
-
+  
   while (op != 0) {
     printf("Digite a sua opção: \n");
     printf("0 - Sair\n");
@@ -14,6 +14,8 @@ int main() {
     printf("3 - Gerar arquivo desordenado\n");
     printf("4 - Gerar Benchmark Bubble Sort\n");
     printf("5 - Gerar Benchmark Insertion Sort\n");
+    printf("6 - Gerar Benchmark Shell Sort\n");
+    printf("7 - Gerar Benchmark Selection Sort\n");
     scanf("%d", &op);
 
     switch (op) {
@@ -41,6 +43,16 @@ int main() {
         printf("Digite o arquivo a ser testado: ");
         scanf("%s", nomeArquivo);
         gerarBenchmarkInsertionSort(nomeArquivo);
+        break;
+      case 6:
+        printf("Digite o arquivo a ser testado: ");
+        scanf("%s",nomeArquivo);
+        gerarBenchmarkShellSort(nomeArquivo);
+      break;
+      case 7:
+        printf("Digite o arquivo a ser testado: ");
+        scanf("%s", nomeArquivo);
+        gerarBenchmarkSelectionSort(nomeArquivo);
         break;
       case 0:
         printf("Saindo...\n");
