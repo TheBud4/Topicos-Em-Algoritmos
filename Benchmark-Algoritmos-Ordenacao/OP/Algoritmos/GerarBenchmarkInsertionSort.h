@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-
 #ifndef GERAR_BENCHMARK_INSERTION_SORT_H
 #define GERAR_BENCHMARK_INSERTION_SORT_H
 
