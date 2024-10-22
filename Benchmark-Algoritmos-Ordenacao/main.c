@@ -19,6 +19,8 @@ int main() {
     printf("|  5  - Gerar Benchmark Insertion Sort  |\n");
     printf("|  6  - Gerar Benchmark Selection Sort  |\n");
     printf("|  7  - Gerar Benchmark Shell Sort      |\n");
+    printf("|  8  - Gerar Benchmark Quick Sort      |\n");
+    printf("|  9  - Gerar Benchmark Merge Sort      |\n");
     printf("|  99 - Limpar tela                     |\n");
     printf("-----------------------------------------\n");
     scanf("%d", &op);
@@ -58,6 +60,16 @@ int main() {
         printf("Digite o arquivo a ser testado: ");
         scanf("%s", nomeArquivo);
         gerarBenchmarkShellSort(nomeArquivo);
+        break;
+      case 8:
+        printf("Digite o arquivo a ser testado: ");
+        scanf("%s", nomeArquivo);
+        gerarBenchmarkQuickSort(nomeArquivo);
+        break;
+      case 9:
+        printf("Digite o arquivo a ser testado: ");
+        scanf("%s", nomeArquivo);
+        gerarBenchmarkMergeSort(nomeArquivo);
         break;
       case 99:
         system("clear");

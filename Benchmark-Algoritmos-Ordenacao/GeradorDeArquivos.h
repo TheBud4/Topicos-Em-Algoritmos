@@ -13,3 +13,5 @@
 #include "./OP/Algoritmos/GerarBenchmarkBubbleSort.h"
 #include "./OP/Algoritmos/GerarBenchmarkShellSort.h"
 #include "./OP/Algoritmos/GerarBenchmarkSelectionSort.h"
+#include "./OP/Algoritmos/GerarBenchmarkQuickSort.h"
+#include "./OP/Algoritmos/GerarBenchmarkMergeSort.h"
