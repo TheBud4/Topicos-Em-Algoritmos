@@ -2,7 +2,39 @@
 #define GERAR_BENCHMARK_MERGE_SORT_H
 
 void mergeSort(int arr[], int n) {
-    printf("Not implemented yet.\n");
+  if (n < 2) return;
+
+  int mid = n / 2;
+  int *left = (int *)malloc(mid * sizeof(int));
+  int *right = (int *)malloc((n - mid) * sizeof(int));
+
+  if (left == NULL || right == NULL) {
+    printf("Erro ao alocar memória.\n");
+    free(left);
+    free(right);
+    return;
+  }
+
+  for (int i = 0; i < mid; i++) left[i] = arr[i];
+  for (int i = mid; i < n; i++) right[i - mid] = arr[i];
+
+  mergeSort(left, mid);
+  mergeSort(right, n - mid);
+
+  int i = 0, j = 0, k = 0;
+  while (i < mid && j < (n - mid)) {
+    if (left[i] <= right[j])
+      arr[k++] = left[i++];
+    else
+      arr[k++] = right[j++];
+  }
+
+  while (i < mid) arr[k++] = left[i++];
+
+  while (j < (n - mid)) arr[k++] = right[j++];
+
+  free(left);
+  free(right);
 }
 
 void gerarBenchmarkMergeSort(char *nomeArquivo) {

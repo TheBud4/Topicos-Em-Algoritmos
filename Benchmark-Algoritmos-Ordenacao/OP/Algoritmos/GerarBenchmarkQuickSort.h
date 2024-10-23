@@ -2,7 +2,25 @@
 #define GERAR_BENCHMARK_QUICK_SORT_H
 
 void quickSort(int arr[], int n) {
-    printf("Not implemented yet.\n");
+  if (n <= 1) return;
+
+  int pivot = arr[n / 2];
+  int i = 0, j = n - 1;
+
+  while (i <= j) {
+    while (arr[i] < pivot) i++;
+    while (arr[j] > pivot) j--;
+    if (i <= j) {
+      int temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+      i++;
+      j--;
+    }
+  }
+
+  quickSort(arr, j + 1);
+  quickSort(arr + i, n - i);
 }
 
 void gerarBenchmarkQuickSort(char *nomeArquivo) {
