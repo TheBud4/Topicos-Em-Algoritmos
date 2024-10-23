@@ -8,5 +8,6 @@ void gerarBenchmarkBubbleSort(char *nomeArquivo);
 void gerarBenchmarkInsertionSort(char *nomeArquivo);
 void gerarBenchmarkShellSort(char *nomeArquivo);
 void gerarBenchmarkSelectionSort(char *nomeArquivo);
-
+void gerarBenchmarkQuickSort(char *nomeArquivo);
+void gerarBenchmarkMergeSort(char *nomeArquivo);
 #endif // !TAD_GERADOR_DE_ARQUIVOS_H
