@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "./GeradorDeArquivos.h"
 
 void exibirMenu() {
@@ -17,6 +14,8 @@ void exibirMenu() {
   printf("|  7  - Gerar Benchmark Shell Sort      |\n");
   printf("|  8  - Gerar Benchmark Quick Sort      |\n");
   printf("|  9  - Gerar Benchmark Merge Sort      |\n");
+  printf("|  10 - Gerar Benchmark Heap Sort       |\n");
+  printf("|  11 - Gerar Benchmark Radix Sort      |\n");
   printf("|  99 - Limpar tela                     |\n");
   printf("+---------------------------------------+\n");
 }
@@ -69,7 +68,7 @@ int main() {
         printf("Digite o arquivo a ser testado: \n");
         printf("> ");
         scanf("%s", nomeArquivo);
-        gerarBenchmarkBubbleSort(nomeArquivo);
+        gerarBenchmarkHeapSort(nomeArquivo);
         break;
       case 5:
         printf("Digite o arquivo a ser testado: \n");
@@ -100,6 +99,18 @@ int main() {
         printf("> ");
         scanf("%s", nomeArquivo);
         gerarBenchmarkMergeSort(nomeArquivo);
+        break;
+      case 10:
+        printf("Digite o arquivo a ser testado: \n");
+        printf("> ");
+        scanf("%s", nomeArquivo);
+        gerarBenchmarkHeapSort(nomeArquivo);
+        break;
+      case 11:
+        printf("Digite o arquivo a ser testado: \n");
+        printf("> ");
+        scanf("%s", nomeArquivo);
+        gerarBenchmarkRadixSort(nomeArquivo);
         break;
       case 99:
         printf("\033[H\033[J"); //Função ANSI para limpar a tela
